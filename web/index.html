@@ -120,7 +120,93 @@
     <script>
         // app.call(window);
     </script>
-    <style id="theme"></style>
+    <style id="theme">* {
+  font-family: system-ui !important;
+  letter-spacing: normal !important;
+  font-size: 12px;
+}
+.bold-noaa {
+  text-shadow: none;
+  font-weight: bold;
+}
+.w96-button {
+  font-size: 12px;
+  height: 1.9em;
+  padding-top: 0px;
+  background: linear-gradient(180deg,#f2f2f2 45%,#ebebeb 0,#cfcfcf);
+  border: 1px solid #8e8f8f;
+  box-shadow: inset 0 0 0 1px #fffc;
+  opacity: 1;
+  transition: opacity .3s !important;
+  outline: none;
+  cursor: inherit;
+}
+.user-input > .nickname {
+  padding: 4px 5px 0 5px;
+}
+body {
+  background: white;
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEUAAAADBhoDBhoDBhoDBhoDBhoDBhoDBhoDBhoDBhoDBhoDBhoDBhoDBhoDBhrl5uj////9/f3i4uT7+/v4+Pjc3d/19fXx8fHW1tju7u7q6urPz9Hm5ubi4uLJycvZ2dukpauwsLXb29vY2NjAwMLT09OJvx6/AAAAD3RSTlMA5ze99LxN07TX0cwanjErspFPAAAAAWJLR0QQlbINLAAAAAd0SU1FB+gCBg4pBCDdSQsAAACESURBVDjL7c/JEoJADEXRpBulQRFQBhmV6f9/kTSwJOm1Vb7tPZWqACqQh9ohMHYITBwCE4cgIAsLRLGB9MkLC9JXlrMCt16Ub07g3qu6YQQeve16fQ6of6pa250D6t63vVzZL6grv+t9FlAHM4yGO6GpgwqmOQRpZl5uIrgH0QP++/WtZ0cHh7MYRoAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjQtMDItMDZUMTQ6NDE6MDQrMDA6MDCB+i2oAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI0LTAyLTA2VDE0OjQxOjA0KzAwOjAw8KeVFAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNC0wMi0wNlQxNDo0MTowNCswMDowMKeytMsAAAAASUVORK5CYII='), auto;
+}
+.user-input {
+  background: white;
+}
+.w96-button:hover {
+  border-color: #3c7fb1;
+  transition: border-color .3s;
+  background: linear-gradient(180deg,#eaf6fd 45%,#bee6fd 0,#a7d9f5) !important;
+}
+.w96-button:active {
+  border-color: #6d91ab;
+  transition: border-color .3s;
+  background: linear-gradient(180deg,#e5f4fc,#c4e5f6 30% 50%,#98d1ef 50%,#68b3db) !important;
+  box-shadow: inset 1px 1px 0 #0003,inset -1px 1px 0 #0001;
+}
+.w96-button:focus {
+  background-image: linear-gradient(180deg,#eaf6fd 45%,#bee6fd 0,#a7d9f5);
+  animation: pulse-anim 1s ease infinite alternate;
+  background-image: linear-gradient(180deg,#eaf6fd 45%,#bee6fd 0,#a7d9f5);
+}
+.user-input > .message-box {
+  font-size: 12px;
+  height: 100%;
+}
+.ctx-menu > .item {
+  padding: 4px 10px 4px 32px;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  height: 11.5px;
+  align-items: center;
+}
+.ctx-menu {
+  border: 1px solid rgba(0,0,0,.4);
+  box-shadow: 4px 4px 3px -2px rgba(0,0,0,.5);
+  background: #f0f0f0;
+}
+.ctx-menu > .item:hover {
+  background: linear-gradient(180deg,#fff9,#e6ecf5cc 90%,#fffc);
+  border-color: #b8d6fb;
+  color: inherit;
+}
+.ctx-menu:before {
+  box-shadow: inset 1px 0 rgba(0,0,0,.15),inset -1px 0 #fff;
+  content: "";
+  height: calc(100% - 4px);
+  left: 30px;
+  pointer-events: none;
+  position: absolute;
+  width: 2px;
+}
+.ctx-menu > .sep {
+  box-shadow: inset 0 1px #00000026,inset 0 -1px #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 3px 0 2px 30px;
+  pointer-events: none;
+  box-sizing: border-box;
+}</style>
     <script type="module">
         import { changeUsername, switchChannel, sendServerInfo } from './main.js';
         window.addEventListener('message', (e) => {
